@@ -65,3 +65,11 @@ def largest_counts(data):  # TODO: Finish implementing this function
     # TODO: Copy the output of the above print statements
     #  into your document/report, or otherwise create a table/visualization for these counts.
     # Manually is fine, or you may explore bar charts in pandas! Be creative :).
+def main(argv):
+    data = pd.read_csv('my_imdb_expanded.csv', index_col=[0])
+    # print(data.head())  # <- Verify the format. Comment this back out once done.
+    
+    largest_counts(data)
+    
+if __name__ == "__main__":
+    main(sys.argv)
