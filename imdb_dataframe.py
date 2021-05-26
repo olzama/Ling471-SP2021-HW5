@@ -82,7 +82,7 @@ def createDataFrames(argv):
     # Step through in the debugger to see what i and f are at step 1, step 2, and so forth.
 
     # Your code goes here... Example of how to get not only a list element but also its index, below:
-    # for index, element in ['a','b','c','d']:
+    # for index, element in enumerate(['a','b','c','d']):
     #    print("{}'s index is {}".format(element,index))
 
     # Use the below column names if you like:
