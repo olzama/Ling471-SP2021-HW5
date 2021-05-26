@@ -81,7 +81,9 @@ def createDataFrames(argv):
     # The enumerate method iterates over both the items in the list and their indices, at the same time.
     # Step through in the debugger to see what i and f are at step 1, step 2, and so forth.
 
-    # Your code goes here...
+    # Your code goes here... Example of how to get not only a list element but also its index, below:
+    # for index, element in ['a','b','c','d']:
+    #    print("{}'s index is {}".format(element,index))
 
     # Use the below column names if you like:
     column_names = ["file", "label", "type", "review",
