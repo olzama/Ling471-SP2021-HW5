@@ -18,7 +18,7 @@ from evaluation import computeAccuracy, computePrecisionRecall
 from assignment3_olzama import predictSimplistic
 
 # TODO: You may need to modify assignment 4 if you just had a main() there.
-# my_naive_bayes() should take a string (column name) as input and return as output 10 floats (numbers)
+# my_naive_bayes() should take a column as input and return as output 10 floats (numbers)
 # representing the metrics.
 from olzama_assignment4 import my_naive_bayes
 
