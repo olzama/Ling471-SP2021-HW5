@@ -102,18 +102,18 @@ def main(argv):
 
     # Part II:
     # Run all models and store the results in variables (dicts).
-    # TODO: Make sure you imported your own naive bayes function and it works properly with a column name input!
+    # TODO: Make sure you imported your own naive bayes function and it works properly with a named column input!
     # TODO: See also the next todo which gives an example of a convenient output for my_naive_bayes()
     # which you can then easily use to collect different scores.
     # For example (and as illustrated below), the models (nb_original, nb_cleaned, etc.) can be not just lists of scores
     # but dicts where each score will be stored by key, like [TEST][POS][RECALL], etc.
     # But you can also just use lists, except then you must not make a mistake, which score you are accessing,
     # when you plot graphs.
-    nb_original = my_naive_bayes('review')
-    nb_cleaned = my_naive_bayes('cleaned_review')
-    nb_lowercase = my_naive_bayes('lowercased')
-    nb_no_stop = my_naive_bayes('no stopwords')
-    nb_lemmatized = my_naive_bayes('lemmatized')
+    nb_original = my_naive_bayes(data['review'])
+    nb_cleaned = my_naive_bayes(data['cleaned_review'])
+    nb_lowercase = my_naive_bayes(data['lowercased'])
+    nb_no_stop = my_naive_bayes(data['no stopwords'])
+    nb_lemmatized = my_naive_bayes(data['lemmatized'])
 
     # Collect accuracies and other scores across models.
     # TODO: Harmonize this with your own naive_bayes() function!
