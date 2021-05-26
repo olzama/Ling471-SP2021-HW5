@@ -36,7 +36,7 @@ def countTokens(text):
     return token_counts
 
 
-def compare_counts(data):  # TODO: Finish implementing this function
+def largest_counts(data):  # TODO: Finish implementing this function
 
     # TODO: Cut up the rows in the dataset according to how you stored things.
     # The below assumes test data is stored first and negative is stored before positive.
@@ -96,9 +96,9 @@ def main(argv):
     data = pd.read_csv('my_imdb_expanded.csv', index_col=[0])
     # print(data.head())  # <- Verify the format. Comment this back out once done.
 
-    # TODO: Comment the call to compare_counts() out once done with Part 1.
+    # TODO: Comment the call to largest_counts() out once done with Part 1.
     # Sorting is kind of slow so you don't want to do it again and again.
-    compare_counts(data)
+    largest_counts(data)
 
     # Part II:
     # Run all models and store the results in variables (dicts).
