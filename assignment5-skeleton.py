@@ -84,7 +84,7 @@ def compare_counts(data):  # TODO: Finish implementing this function
         f.write('Lemmatized POS reviews:\n')
         for k, v in train_counts_pos_lemmatized[:19]:
             f.write('{}\t{}\n'.format(k, v))
-        # TODO: Do the same for all the remaining dicts, per Assignment spec.
+        # TODO: Do the same for all the remaining training dicts, per Assignment spec.
             
             
     # TODO: Copy the output of the above print statements
