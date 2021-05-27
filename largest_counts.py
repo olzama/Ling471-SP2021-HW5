@@ -1,6 +1,11 @@
+import sys
+import pandas as pd
+
 # From Assignment 2, copied manually here just to remind you
 # that you can copy stuff manually if importing isn't working out.
 # You can just use this or you can replace it with your function.
+
+
 def countTokens(text):
     token_counts = {}
     tokens = text.split(' ')
@@ -42,34 +47,39 @@ def largest_counts(data):  # TODO: Finish implementing this function
         pos_train_data["lemmatized"].str.cat())
 
     # Once the dicts are sorted, output the first 20 rows for each.
-    # This is already done below, no change needed.
+    # This is already done below, but changes may be needed depending on what you did to sort the dicts.
+    # The [:19] "slicing" syntax expects a list. If you sorting call return a list (which is likely, as being sorted
+    # is conceptualy a properly of LISTS,  NOT dicts),
+    # you may want to remove the additional list(dict_name.items()) conversion.
     with open('counts.txt', 'w') as f:
         f.write('Original POS reviews:\n')
-        for k, v in train_counts_pos_original[:19]:
+        for k, v in list(train_counts_pos_original.items())[:19]:
             f.write('{}\t{}\n'.format(k, v))
         f.write('Cleaned POS reviews:\n')
-        for k, v in train_counts_pos_cleaned[:19]:
+        for k, v in list(train_counts_pos_cleaned.items())[:19]:
             f.write('{}\t{}\n'.format(k, v))
         f.write('Lowercased POS reviews:\n')
-        for k, v in train_counts_pos_lowercased[:19]:
+        for k, v in list(train_counts_pos_lowercased.items())[:19]:
             f.write('{}\t{}\n'.format(k, v))
         f.write('No stopwords POS reviews:\n')
-        for k, v in train_counts_pos_no_stop[:19]:
+        for k, v in list(train_counts_pos_no_stop.items())[:19]:
             f.write('{}\t{}\n'.format(k, v))
         f.write('Lemmatized POS reviews:\n')
-        for k, v in train_counts_pos_lemmatized[:19]:
+        for k, v in list(train_counts_pos_lemmatized.items())[:19]:
             f.write('{}\t{}\n'.format(k, v))
         # TODO: Do the same for all the remaining training dicts, per Assignment spec.
-            
-            
+
     # TODO: Copy the output of the above print statements
     #  into your document/report, or otherwise create a table/visualization for these counts.
     # Manually is fine, or you may explore bar charts in pandas! Be creative :).
+
+
 def main(argv):
-    data = pd.read_csv('my_imdb_expanded.csv', index_col=[0])
+    data = pd.read_csv(argv[1], index_col=[0])
     # print(data.head())  # <- Verify the format. Comment this back out once done.
-    
+
     largest_counts(data)
-    
+
+
 if __name__ == "__main__":
     main(sys.argv)
