@@ -53,19 +53,19 @@ def largest_counts(data):  # TODO: Finish implementing this function
     # you may want to remove the additional list(dict_name.items()) conversion.
     with open('counts.txt', 'w') as f:
         f.write('Original POS reviews:\n')
-        for k, v in list(train_counts_pos_original.items())[:19]:
+        for k, v in list(train_counts_pos_original.items())[:20]:
             f.write('{}\t{}\n'.format(k, v))
         f.write('Cleaned POS reviews:\n')
-        for k, v in list(train_counts_pos_cleaned.items())[:19]:
+        for k, v in list(train_counts_pos_cleaned.items())[:20]:
             f.write('{}\t{}\n'.format(k, v))
         f.write('Lowercased POS reviews:\n')
-        for k, v in list(train_counts_pos_lowercased.items())[:19]:
+        for k, v in list(train_counts_pos_lowercased.items())[:20]:
             f.write('{}\t{}\n'.format(k, v))
         f.write('No stopwords POS reviews:\n')
-        for k, v in list(train_counts_pos_no_stop.items())[:19]:
+        for k, v in list(train_counts_pos_no_stop.items())[:20]:
             f.write('{}\t{}\n'.format(k, v))
         f.write('Lemmatized POS reviews:\n')
-        for k, v in list(train_counts_pos_lemmatized.items())[:19]:
+        for k, v in list(train_counts_pos_lemmatized.items())[:20]:
             f.write('{}\t{}\n'.format(k, v))
         # TODO: Do the same for all the remaining training dicts, per Assignment spec.
 
